@@ -61,20 +61,17 @@ def main():
     print('Тасуем карты')
     deck_for_Durak.shuffle()
     print('Колода готова')
-    hand1=Hand()
-    hand2=Hand()
-    hand3=Hand()
-    hand4=Hand()
-    hands=[hand1, hand2, hand3, hand4]
+    count=int(input('Введите количество рук: '))
+    hands=[]
+    for i in range(count):
+        hand=Hand()
+        hands.append(hand)
     print('Время раздать карты')
     deck_for_Durak.deal(hands, per_hand=6)
     print('Карты розданы')
-    print(hand1)
-    print(hand2)
-    print(hand3)
-    print(hand4)
+    for d in hands:
+        print(d)
 
 main()
-
 
 
